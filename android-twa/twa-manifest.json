@@ -1,0 +1,43 @@
+{
+  "packageId": "app.stillpoint.twa",
+  "host": "stillpoint-self.vercel.app",
+  "name": "StillPoint",
+  "launcherName": "StillPoint",
+  "display": "standalone",
+  "themeColor": "#070A12",
+  "themeColorDark": "#070A12",
+  "navigationColor": "#070A12",
+  "navigationColorDark": "#070A12",
+  "navigationDividerColor": "#070A12",
+  "navigationDividerColorDark": "#070A12",
+  "backgroundColor": "#070A12",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://stillpoint-self.vercel.app/icons/icon-512.png",
+  "maskableIconUrl": "https://stillpoint-self.vercel.app/icons/icon-maskable-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://stillpoint-self.vercel.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://stillpoint-self.vercel.app/",
+  "minSdkVersion": 24,
+  "orientation": "portrait",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "displayOverride": []
+}
