@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-surface: var(--surface);
+  --color-muted: var(--muted);
+  --color-border: var(--border-c);
+  --color-primary: var(--accent);
+  --color-primary-foreground: #04130f;
+  --color-accent: var(--accent-2);
+  --radius-card: 1.25rem;
+}
+
+:root {
+  --bg: #070a12;
+  --surface: rgba(255, 255, 255, 0.045);
+  --ink: #e9eef7;
+  --muted: #94a3b8;
+  --border-c: rgba(255, 255, 255, 0.09);
+  --accent: #7dd3c0;
+  --accent-2: #a78bfa;
+}
+
+* {
+  border-color: var(--border-c);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif;
+  background:
+    radial-gradient(900px 600px at 12% -8%, rgba(125, 211, 192, 0.10), transparent 60%),
+    radial-gradient(800px 520px at 88% 4%, rgba(167, 139, 250, 0.10), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(96, 165, 250, 0.07), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(125, 211, 192, 0.28);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025));
+  border: 1px solid var(--border-c);
+  backdrop-filter: blur(14px);
+}
+
+.hairline {
+  background-image: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  height: 1px;
+}
+
+.glow-ring {
+  box-shadow:
+    0 0 0 1px rgba(125, 211, 192, 0.25),
+    0 24px 80px -32px rgba(125, 211, 192, 0.45);
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(0, -12px, 0) scale(1.02); }
+}
+
+.drift {
+  animation: drift 9s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(0.86); opacity: 0.75; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drift, .breathe { animation: none !important; }
+  * { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
+.prose-calm p {
+  margin-bottom: 0.95rem;
+  line-height: 1.85;
+  color: #d6dfec;
+}
+.prose-calm p:last-child {
+  margin-bottom: 0;
+}
