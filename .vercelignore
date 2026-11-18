@@ -1,0 +1,10 @@
+.env
+.env.local
+.env*.local
+.git
+.next
+node_modules
+src-tauri/target
+twa-build
+.dev-server.log
+tsconfig.tsbuildinfo

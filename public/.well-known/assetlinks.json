@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.stillpoint.twa",
+      "sha256_cert_fingerprints": [
+        "57:3C:7B:D4:EF:79:5E:82:E0:21:C9:F3:73:F3:35:22:F4:B4:0B:A0:06:43:33:10:34:B6:61:8D:38:B5:64:E1"
+      ]
+    }
+  }
+]
